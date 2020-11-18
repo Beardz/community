@@ -58,13 +58,11 @@
                     <li class="dropdown" th:if="${session.user == null}">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">登录<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a th:href="@{https://github.com/login/oauth/authorize(client_id='07b57d5d452ac19df224',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('gitRedirectUri')},scope='user',state=1)}">GitHub</a></li>
+                            <li><a th:href="@{https://github.com/login/oauth/authorize(client_id='',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('gitRedirectUri')},scope='user',state=1)}">GitHub</a></li>
                             <li role="separator" class="divider"></li>
-                            <li> <a th:href="@{https://gitee.com/oauth/authorize(client_id='41357a8fe319f1712b6490bcc726380121cfc5723919677b6ed6cc51c75098ba',redirect_uri='http://localhost:8887/maYunCallback',response_type='code')}">码云</a></li>
+                            <li> <a th:href="@{https://gitee.com/oauth/authorize(client_id='',redirect_uri='http://localhost:8887/maYunCallback',response_type='code')}">码云</a></li>
                         </ul>
-<!--                        <a th:href="@{https://github.com/login/oauth/authorize(client_id='07b57d5d452ac19df224',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},scope='user',state=1)}">登录</a>-->
-<!--                        <a href="https://gitee.com/oauth/authorize?client_id=41357a8fe319f1712b6490bcc726380121cfc5723919677b6ed6cc51c75098ba&redirect_uri=http://localhost:8080/callback&response_type=code&scope=user_info">码云登录</a>-->
-<!--                        <a th:href="@{https://gitee.com/oauth/authorize(client_id='41357a8fe319f1712b6490bcc726380121cfc5723919677b6ed6cc51c75098ba',redirect_uri=${#httpServletRequest.getServletContext().getAttribute('redirectUri')},response_type='code',scope='user_info')}">登录</a>-->
+
                     </li>
 
                 </ul>
